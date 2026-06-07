@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adv. Priya Sharma — Criminal & Family Law | Delhi</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --ink: #1a1814;
+    --ink-light: #3d3830;
+    --gold: #8a6d3b;
+    --gold-light: #b89a5e;
+    --cream: #f8f5ef;
+    --warm-white: #fdfcf9;
+    --muted: #7a7468;
+    --border: #e4ded4;
+    --section-gap: 96px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--warm-white);
+    color: var(--ink);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 48px;
+    background: rgba(253, 252, 249, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    transition: padding 0.3s;
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px; font-weight: 600; color: var(--ink);
+    letter-spacing: 0.02em; text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a {
+    font-size: 13px; font-weight: 400; color: var(--muted);
+    text-decoration: none; letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-cta {
+    font-size: 12px; font-weight: 500; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--gold);
+    text-decoration: none; border-bottom: 1px solid var(--gold-light);
+    padding-bottom: 1px; transition: color 0.2s;
+  }
+  .nav-cta:hover { color: var(--gold-light); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid; grid-template-columns: 1fr 1fr;
+    padding-top: 80px;
+  }
+  .hero-left {
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 80px 64px 80px 80px;
+  }
+  .hero-eyebrow {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 24px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .hero-eyebrow::before {
+    content: ''; width: 32px; height: 1px; background: var(--gold-light);
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(38px, 4vw, 58px);
+    font-weight: 300; line-height: 1.1;
+    color: var(--ink); margin-bottom: 24px;
+  }
+  .hero-title em { font-style: italic; color: var(--gold); }
+  .hero-sub {
+    font-size: 15px; font-weight: 300; color: var(--muted);
+    line-height: 1.8; margin-bottom: 40px; max-width: 400px;
+  }
+  .hero-actions { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-block;
+    padding: 14px 32px;
+    background: var(--ink); color: var(--cream);
+    font-size: 12px; font-weight: 500; letter-spacing: 0.08em;
+    text-transform: uppercase; text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { background: var(--ink-light); transform: translateY(-1px); }
+  .btn-ghost {
+    font-size: 13px; color: var(--muted); text-decoration: none;
+    border-bottom: 1px solid var(--border); padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .btn-ghost:hover { color: var(--ink); border-color: var(--ink); }
+
+  .hero-stats {
+    margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--border);
+    display: flex; gap: 40px;
+  }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px; font-weight: 400; color: var(--ink); line-height: 1;
+  }
+  .stat-label { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+  .hero-right {
+    background: var(--cream);
+    position: relative; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .hero-img-frame {
+    width: 72%; aspect-ratio: 3/4;
+    background: var(--border);
+    position: relative;
+    box-shadow: 24px 24px 0 var(--border);
+  }
+  .hero-img-inner {
+    width: 100%; height: 100%;
+    background: linear-gradient(160deg, #d4c9b8 0%, #b8a990 100%);
+    display: flex; align-items: flex-end; padding: 28px;
+  }
+  .hero-img-caption {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px; color: var(--ink-light); font-style: italic;
+  }
+  .hero-badge {
+    position: absolute; top: -12px; right: -12px;
+    width: 88px; height: 88px; background: var(--gold);
+    border-radius: 50%; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; text-align: center;
+  }
+  .hero-badge span { font-size: 22px; font-weight: 600; color: white; font-family: 'Cormorant Garamond', serif; line-height: 1; }
+  .hero-badge small { font-size: 9px; color: rgba(255,255,255,0.8); letter-spacing: 0.05em; }
+
+  /* SECTION SHARED */
+  section { padding: var(--section-gap) 80px; }
+  .section-tag {
+    font-size: 10px; font-weight: 500; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 16px; display: flex; align-items: center; gap: 10px;
+  }
+  .section-tag::before { content: ''; width: 24px; height: 1px; background: var(--gold-light); }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 3vw, 42px); font-weight: 300;
+    line-height: 1.2; color: var(--ink);
+  }
+
+  /* ABOUT */
+  .about { background: var(--cream); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .about-body { font-size: 15px; font-weight: 300; color: var(--muted); line-height: 1.9; margin-top: 24px; }
+  .about-body p + p { margin-top: 16px; }
+  .credentials { margin-top: 36px; display: flex; flex-direction: column; gap: 12px; }
+  .cred-item {
+    display: flex; align-items: flex-start; gap: 12px;
+    font-size: 13px; color: var(--ink-light);
+  }
+  .cred-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: 6px; }
+  .about-right { display: flex; flex-direction: column; gap: 20px; }
+  .about-card {
+    padding: 24px 28px; background: var(--warm-white);
+    border-left: 2px solid var(--gold-light);
+  }
+  .about-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 400; margin-bottom: 8px; }
+  .about-card p { font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+  /* PRACTICE AREAS */
+  .practice-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); margin-top: 48px; }
+  .practice-item {
+    background: var(--warm-white); padding: 36px 32px;
+    transition: background 0.2s;
+    cursor: default;
+  }
+  .practice-item:hover { background: var(--cream); }
+  .practice-icon { font-size: 28px; margin-bottom: 16px; }
+  .practice-item h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px; font-weight: 400; margin-bottom: 10px; color: var(--ink);
+  }
+  .practice-item p { font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+  /* WHY ONLINE */
+  .why-online { background: var(--ink); }
+  .why-online .section-tag { color: var(--gold-light); }
+  .why-online .section-tag::before { background: var(--gold); }
+  .why-online .section-title { color: var(--cream); }
+  .benefits-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 56px; }
+  .benefit {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 24px;
+  }
+  .benefit-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px; font-weight: 300; color: var(--gold-light);
+    line-height: 1; margin-bottom: 16px;
+  }
+  .benefit h4 { font-size: 14px; font-weight: 500; color: var(--cream); margin-bottom: 10px; }
+  .benefit p { font-size: 13px; color: rgba(253,252,249,0.5); line-height: 1.7; }
+
+  /* TESTIMONIALS */
+  .testimonials-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 48px; }
+  .testimonial {
+    padding: 32px; background: var(--cream);
+    border: 1px solid var(--border);
+  }
+  .testimonial-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px; font-style: italic; font-weight: 300;
+    color: var(--ink); line-height: 1.6; margin-bottom: 20px;
+  }
+  .testimonial-author { font-size: 12px; color: var(--muted); letter-spacing: 0.04em; }
+  .testimonial-author strong { color: var(--ink); display: block; font-weight: 500; margin-bottom: 2px; }
+
+  /* CONTACT */
+  .contact { background: var(--cream); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-top: 48px; }
+  .contact-info { display: flex; flex-direction: column; gap: 28px; }
+  .contact-detail { display: flex; gap: 16px; }
+  .contact-detail-icon {
+    width: 40px; height: 40px; border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; flex-shrink: 0;
+  }
+  .contact-detail h5 { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .contact-detail p { font-size: 14px; color: var(--ink); }
+  .map-placeholder {
+    background: var(--border); height: 180px; margin-top: 28px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; color: var(--muted);
+  }
+
+  /* FORM */
+  .contact-form { display: flex; flex-direction: column; gap: 16px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-group label { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 12px 16px; background: var(--warm-white);
+    border: 1px solid var(--border); border-radius: 0;
+    font-family: 'Inter', sans-serif; font-size: 14px; color: var(--ink);
+    outline: none; transition: border-color 0.2s;
+    appearance: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--gold); }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .form-submit {
+    padding: 15px 32px; background: var(--gold);
+    border: none; color: white;
+    font-family: 'Inter', sans-serif; font-size: 12px;
+    font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+    cursor: pointer; transition: background 0.2s, transform 0.15s;
+    align-self: flex-start;
+  }
+  .form-submit:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .form-note { font-size: 11px; color: var(--muted); }
+  .success-banner {
+    display: none; padding: 16px 20px; background: #f0f7f0;
+    border: 1px solid #b8d8b8; font-size: 14px; color: #2d6a2d;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--ink); color: var(--cream);
+    padding: 48px 80px 32px;
+  }
+  .footer-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; }
+  .footer-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px; font-weight: 400; margin-bottom: 8px;
+  }
+  .footer-tagline { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .footer-links { display: flex; gap: 28px; list-style: none; }
+  .footer-links a { font-size: 12px; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--gold-light); }
+  .footer-bottom {
+    padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08);
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .footer-bottom p { font-size: 11px; color: rgba(255,255,255,0.3); }
+  .footer-credit { font-size: 11px; color: rgba(255,255,255,0.2); }
+  .footer-credit a { color: var(--gold-light); text-decoration: none; }
+
+  /* REDS BANNER */
+  .reds-demo-banner {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
+    background: var(--ink); border-top: 2px solid var(--gold);
+    padding: 10px 32px; display: flex; align-items: center; justify-content: space-between;
+  }
+  .reds-demo-text { font-size: 12px; color: rgba(255,255,255,0.6); }
+  .reds-demo-text strong { color: var(--gold-light); }
+  .reds-demo-cta {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--gold);
+    text-decoration: none; border: 1px solid var(--gold);
+    padding: 6px 16px; transition: background 0.2s, color 0.2s;
+  }
+  .reds-demo-cta:hover { background: var(--gold); color: var(--ink); }
+
+  @media (max-width: 768px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    section { padding: 64px 24px; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-left { padding: 40px 24px; }
+    .hero-right { display: none; }
+    .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .practice-grid { grid-template-columns: 1fr; }
+    .benefits-grid { grid-template-columns: 1fr 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .footer-top { flex-direction: column; gap: 24px; }
+    .footer-links { flex-wrap: wrap; }
+    footer { padding: 40px 24px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#home">Adv. Priya Sharma</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#practice">Practice Areas</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="#contact">Book Consultation</a>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero" style="padding:0">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Criminal & Family Law · Delhi High Court</div>
+    <h1 class="hero-title">
+      Trusted legal counsel,<br>
+      <em>when it matters most.</em>
+    </h1>
+    <p class="hero-sub">
+      Over 12 years representing clients across Delhi and NCR in criminal defence, divorce, custody, and civil matters. Senior Advocate, Delhi Bar Association.
+    </p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="#contact">Book a Free Consultation</a>
+      <a class="btn-ghost" href="#practice">View practice areas →</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">12+</div>
+        <div class="stat-label">Years of practice</div>
+      </div>
+      <div>
+        <div class="stat-num">800+</div>
+        <div class="stat-label">Cases handled</div>
+      </div>
+      <div>
+        <div class="stat-num">95%</div>
+        <div class="stat-label">Client satisfaction</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img-frame">
+      <div class="hero-img-inner">
+        <div class="hero-img-caption">Adv. Priya Sharma<br>Senior Advocate, Delhi High Court</div>
+      </div>
+      <div class="hero-badge">
+        <span>BCI</span>
+        <small>REGISTERED</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="about-grid">
+    <div>
+      <div class="section-tag">About</div>
+      <h2 class="section-title">A career built on<br>principled advocacy.</h2>
+      <div class="about-body">
+        <p>I established my practice in 2012 after completing my LLB from Campus Law Centre, Delhi University, and an LLM in Criminal Law from NLSIU Bangalore. I appear regularly before the Delhi High Court and district courts across NCR.</p>
+        <p>My practice is built on one principle: every client deserves to understand their situation fully — and to feel genuinely heard.</p>
+      </div>
+      <div class="credentials">
+        <div class="cred-item"><div class="cred-dot"></div>LLB – Campus Law Centre, Delhi University</div>
+        <div class="cred-item"><div class="cred-dot"></div>LLM (Criminal Law) – NLSIU, Bangalore</div>
+        <div class="cred-item"><div class="cred-dot"></div>Enrolled: Bar Council of Delhi, 2012</div>
+        <div class="cred-item"><div class="cred-dot"></div>Member: Delhi Bar Association</div>
+      </div>
+    </div>
+    <div class="about-right">
+      <div class="about-card">
+        <h4>Transparent & Honest</h4>
+        <p>I give you a realistic assessment of your case — not what you want to hear, but what you need to know to make informed decisions.</p>
+      </div>
+      <div class="about-card">
+        <h4>Accessible & Responsive</h4>
+        <p>You'll always know the status of your matter. I respond to client queries within 24 hours, every time.</p>
+      </div>
+      <div class="about-card">
+        <h4>Court-ready Strategy</h4>
+        <p>Every case is prepared with precision — research, documentation, and courtroom strategy tailored to your specific situation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRACTICE AREAS -->
+<section id="practice">
+  <div class="section-tag">Practice Areas</div>
+  <h2 class="section-title">Areas of expertise</h2>
+  <div class="practice-grid">
+    <div class="practice-item">
+      <div class="practice-icon">⚖️</div>
+      <h3>Criminal Defence</h3>
+      <p>Bail applications, trial representation, appeals. Experienced in IPC offences, white-collar crime, and NDPS matters before Delhi courts.</p>
+    </div>
+    <div class="practice-item">
+      <div class="practice-icon">🏛️</div>
+      <h3>Family Law</h3>
+      <p>Divorce, judicial separation, child custody, maintenance, and matrimonial property disputes. Handled with sensitivity and discretion.</p>
+    </div>
+    <div class="practice-item">
+      <div class="practice-icon">📜</div>
+      <h3>Civil Litigation</h3>
+      <p>Property disputes, injunctions, contract matters, recovery suits and execution proceedings before civil courts in Delhi-NCR.</p>
+    </div>
+    <div class="practice-item">
+      <div class="practice-icon">🏠</div>
+      <h3>Property & Real Estate</h3>
+      <p>Title disputes, builder-buyer matters, tenancy law, DDA allotment issues and succession / probate in relation to immovable property.</p>
+    </div>
+    <div class="practice-item">
+      <div class="practice-icon">👨‍👩‍👧</div>
+      <h3>Domestic Violence</h3>
+      <p>Protection orders, right to residence, compensation claims under the Protection of Women from Domestic Violence Act, 2005.</p>
+    </div>
+    <div class="practice-item">
+      <div class="practice-icon">📋</div>
+      <h3>Consumer Disputes</h3>
+      <p>Representation before District and State Consumer Commissions for deficiency of service, insurance disputes and banking complaints.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ONLINE -->
+<section class="why-online">
+  <div class="section-tag">Digital Presence</div>
+  <h2 class="section-title" style="max-width:480px">Why being online changes<br>everything for your practice.</h2>
+  <div class="benefits-grid">
+    <div class="benefit">
+      <div class="benefit-num">01</div>
+      <h4>Clients find you first</h4>
+      <p>Over 60% of people in India now search for legal help online before asking anyone. If you're not there, they call someone else.</p>
+    </div>
+    <div class="benefit">
+      <div class="benefit-num">02</div>
+      <h4>Credibility before the call</h4>
+      <p>A professional website signals seriousness. Clients arrive already trusting you — not needing to be convinced.</p>
+    </div>
+    <div class="benefit">
+      <div class="benefit-num">03</div>
+      <h4>Available 24/7</h4>
+      <p>Your website works even when you're in court. Clients can read about you, your work, and contact you at any hour.</p>
+    </div>
+    <div class="benefit">
+      <div class="benefit-num">04</div>
+      <h4>Better quality referrals</h4>
+      <p>People who find you online and read your profile arrive informed, serious, and far more likely to engage your services.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-tag">Testimonials</div>
+  <h2 class="section-title">What clients say</h2>
+  <div class="testimonials-grid">
+    <div class="testimonial">
+      <div class="testimonial-text">"Adv. Sharma handled my divorce with remarkable care. She explained every step clearly and always kept my children's interests front and centre. I cannot recommend her enough."</div>
+      <div class="testimonial-author"><strong>Meera R.</strong>Family Law Client, Gurugram</div>
+    </div>
+    <div class="testimonial">
+      <div class="testimonial-text">"Facing a serious IPC charge was the most frightening thing I've experienced. Priya ji's calm, methodical approach and genuine expertise made all the difference to the outcome."</div>
+      <div class="testimonial-author"><strong>Anil K.</strong>Criminal Defence Client, Delhi</div>
+    </div>
+    <div class="testimonial">
+      <div class="testimonial-text">"Our property dispute had been stuck for three years before we approached Adv. Sharma. She resolved it in eight months. Absolutely professional and worth every rupee."</div>
+      <div class="testimonial-author"><strong>Suresh & Kavita M.</strong>Property Dispute Clients, Noida</div>
+    </div>
+    <div class="testimonial">
+      <div class="testimonial-text">"I found Adv. Sharma's website while searching at midnight during a domestic crisis. I called the next morning and she saw me that same day. That responsiveness saved me."</div>
+      <div class="testimonial-author"><strong>Ritu S.</strong>Domestic Violence Matter, Delhi</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="section-tag">Get in Touch</div>
+  <h2 class="section-title">Book a consultation</h2>
+  <div class="contact-grid">
+    <div>
+      <div class="contact-info">
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📞</div>
+          <div>
+            <h5>Phone / WhatsApp</h5>
+            <p>+91 98100 00000</p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">✉️</div>
+          <div>
+            <h5>Email</h5>
+            <p>adv.priyasharma@gmail.com</p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📍</div>
+          <div>
+            <h5>Chamber Address</h5>
+            <p>Chamber No. 412, Lawyers Chambers<br>Delhi High Court, New Delhi – 110003</p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">🕐</div>
+          <div>
+            <h5>Consultation Hours</h5>
+            <p>Mon–Sat: 10:00 AM – 6:00 PM</p>
+          </div>
+        </div>
+      </div>
+      <div class="map-placeholder">📍 Map widget would appear here</div>
+    </div>
+
+    <div>
+      <div class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label>Phone / WhatsApp</label>
+            <input type="tel" placeholder="+91 XXXXX XXXXX" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Matter Type</label>
+          <select>
+            <option value="" disabled selected>Select area of concern</option>
+            <option>Criminal Defence</option>
+            <option>Divorce / Separation</option>
+            <option>Child Custody</option>
+            <option>Property Dispute</option>
+            <option>Domestic Violence</option>
+            <option>Consumer Complaint</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Brief Description</label>
+          <textarea placeholder="Briefly describe your situation (kept strictly confidential)"></textarea>
+        </div>
+        <button class="form-submit" onclick="handleSubmit()">Request Consultation →</button>
+        <p class="form-note">All enquiries are treated with complete confidentiality. We respond within 24 hours.</p>
+      </div>
+      <div class="success-banner" id="successBanner">
+        ✓ &nbsp; Thank you. Adv. Sharma's office will contact you within 24 hours.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-name">Adv. Priya Sharma</div>
+      <div class="footer-tagline">Senior Advocate · Delhi High Court · Est. 2012</div>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#practice">Practice Areas</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Adv. Priya Sharma. All rights reserved. Bar Council of Delhi Reg. No. D/XXXX/2012.</p>
+    <div class="footer-credit">Website by <a href="mailto:raghavmittal.founder@gmail.com">Reds Techno Services</a></div>
+  </div>
+</footer>
+
+<!-- REDS DEMO BANNER -->
+<div class="reds-demo-banner">
+  <div class="reds-demo-text">
+    🔴 <strong>Demo Site</strong> — This is a sample built by <strong>Reds Techno Services</strong> · Your website could look exactly like this · ₹4,500 one-time
+  </div>
+  <a class="reds-demo-cta" href="mailto:raghavmittal.founder@gmail.com">Get yours →</a>
+</div>
+
+<script>
+  function handleSubmit() {
+    const form = document.getElementById('contactForm');
+    const banner = document.getElementById('successBanner');
+    form.style.display = 'none';
+    banner.style.display = 'block';
+  }
+
+  // Shrink nav on scroll
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 60) {
+      nav.style.padding = '12px 48px';
+    } else {
+      nav.style.padding = '20px 48px';
+    }
+  });
+</script>
+
+</body>
+</html>
